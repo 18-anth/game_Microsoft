@@ -1,0 +1,217 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  transition: 0.5s ease;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+#container {
+  height: 400px;
+  width: 1200px;
+  position: relative;
+  overflow: hidden;
+}
+
+#container #dino {
+  height: 70px;
+  width: 70px;
+  position: absolute;
+  bottom: 28px;
+  left: 20px;
+}
+
+#container #dino img {
+  height: 70px;
+  width: 70px;
+}
+
+.dinoActive {
+  animation: animateDino 0.5s linear infinite;
+}
+
+@keyframes animateDino {
+  0%,
+  100% {
+    bottom: 28px;
+  }
+
+  45%,
+  55% {
+    bottom: 160px;
+  }
+}
+
+#container #block {
+  position: absolute;
+  bottom: 20px;
+  right: -20px;
+}
+
+#container #block img {
+  height: 80px;
+  width: 125px;
+}
+
+.blockActive {
+  animation: blockAnimate 1s linear infinite;
+}
+
+@keyframes blockAnimate {
+  0% {
+    right: -125px;
+  }
+
+  100% {
+    right: 100%;
+  }
+}
+
+#container #road {
+  height: 30px;
+  width: 1200px;
+  position: absolute;
+  bottom: 0;
+}
+
+#container #road img {
+  height: 30px;
+  width: 2000px;
+  position: absolute;
+  left: 0;
+  animation: none;
+}
+
+@keyframes roadAnimate {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: -800px;
+  }
+}
+
+#container #cloud {
+  height: 80px;
+  width: 1200px;
+  border-radius: 40px;
+  position: absolute;
+  top: 30px;
+}
+
+#container #cloud img {
+  height: 80px;
+  width: 2000px;
+  position: absolute;
+  left: -2000px;
+  animation: none;
+  background: transparent;
+}
+
+@keyframes cloudAnimate {
+  0% {
+    left: -2000px;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+#score {
+  height: auto;
+  width: auto;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  color: #ff1313be;
+}
+
+#gameOver {
+  display: none;
+  font-size: 70px;
+  position: absolute;
+  left: calc(50% - 181px);
+  top: calc(50% - 40px);
+  width: 362px;
+  height: 80px;
+  color: #ff9797;
+}
+#gameOver p span{
+    color: #ff1313be;
+}
+#body{
+  background: url(/assets/img-1.jpg) center center/cover no-repeat;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 0 1000px rgb(0 0 0 / 20%);
+  object-fit: contain;
+}
+/*cualquier color*/
+
+.card .c-colors {
+  width: 20px;
+  display: flex;
+}
+
+.card .c-colors .colors span {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  margin-bottom: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  position: relative;
+}
+
+.card .c-colors .colors span::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transform: scale(1.5);
+  transition: 0.5s;
+}
+
+.card .c-colors .colors span:last-child {
+  margin-bottom: 0px;
+}
+
+.card .c-colors .colors span#amarillo {
+  background: yellow;
+}
+
+.card .c-colors .colors span#verde {
+    background: rgb(0, 255, 13);
+}
+.card .c-colors .colors span#rojo {
+    background: red;
+}
+
+
+.card .c-colors .colors span#amarillo:hover::before{
+    background: rgb(229, 255, 0);
+    transform: scale(.8);
+}
+
+.card .c-colors .colors span#verde:hover::before{
+    background: rgb(0, 255, 21);
+    transform: scale(.8);
+}
+
+.card .c-colors .colors span#rojo:hover::before{
+    background: rgba(255, 0, 13, 0.959);
+    transform: scale(.8);
+}
