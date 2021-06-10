@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"/>
+        <title>Dino Game</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+
+    <body>
+        <section>
+
+            <div id="container">
+    
+                <div id="dino">
+                    <img src="assets/dino.svg" alt="dino">
+                </div>
+                <div id="block">
+                    <img src="assets/block.svg" alt="blocks">
+
+                </div>
+                <div id="road">
+                    <img src="assets/road.svg" alt="road">
+                </div>
+                
+                <div id="score">Score <b>00</b></div>
+                <div id="gameOver">
+                    <p>Ga<span>me  Ov</span>er</p>
+                </div>
+            </div>
+        </section>
+
+        <script src="js/file.js"></script>
+        <script>
+            function changeBg () {
+                const images = [
+                   " url('assets/home.jpg')",
+                   " url('assets/cielo.jpg')",
+                   " url('assets/playa.jpg')",
+                   " url('assets/galaxy.jpg')",
+                   " url('assets/atardecer.jpg')",
+                   " url('assets/rose.jpg')",
+                   " url('assets/img-1.jpg')",
+                   " url('assets/img-1.jpg')",
+                   " url('assets/home.jpg')",
+                   " url('assets/cielo.jpg')",
+                   " url('assets/playa.jpg')",
+                   " url('assets/galaxy.jpg')",
+                   " url('assets/atardecer.jpg')",
+                   " url('assets/rose.jpg')",
+                ]
+                const section = document.querySelector('body')
+                const bg = images[Math.floor(Math.random()*images.length)];
+                section.style.background = bg;
+            }
+            setInterval(changeBg, 2000)
+        </script>
+    </body>
+
+</html>
+
+
+ 
+ 
