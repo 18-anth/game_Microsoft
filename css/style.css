@@ -215,3 +215,17 @@ body {
     background: rgba(255, 0, 13, 0.959);
     transform: scale(.8);
 }
+
+
+
+@media screen and (max-width: 500px){
+  #container{
+    width: 400px;
+  }
+  #container #block img{
+    width: 60px;
+  }
+  #container #dino img{
+    width: 30px;
+  }
+}
