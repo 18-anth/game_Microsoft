@@ -13,9 +13,11 @@
         <section>
 
             <div id="container">
-    
+                <div id="gameOver">
+                    <span style="--l: 'Ga'; ">Ga</span><span style="--l: 'me Ov';">me  Ov</span><span style="--l: 'er';">er</span> 
+                </div>
                 <div id="dino">
-                    <img src="assets/dino.svg" alt="dino">
+                    <img  src="assets/dino.svg"  alt="dino">
                 </div>
                 <div id="block">
                     <img src="assets/block.svg" alt="blocks">
@@ -26,37 +28,24 @@
                 </div>
                 
                 <div id="score">Score <b>00</b></div>
-                <div id="gameOver">
-                    <p>Ga<span>me  Ov</span>er</p>
-                </div>
+                
             </div>
+            <div class="animation_area">
+                <ul class="box_area">
+                  <li></li><li></li><li>
+                  </li><li></li><li></li>
+                  <li></li><li></li><li>
+                  </li><li></li><li></li>
+                  <li></li><li></li><li>
+                  </li><li></li><li></li>
+                  <li></li><li></li><li></li>
+                  <li></li><li></li><li></li>
+                </ul>                    
+              </div>
         </section>
 
         <script src="js/file.js"></script>
-        <script>
-            function changeBg () {
-                const images = [
-                   " url('assets/home.jpg')",
-                   " url('assets/cielo.jpg')",
-                   " url('assets/playa.jpg')",
-                   " url('assets/galaxy.jpg')",
-                   " url('assets/atardecer.jpg')",
-                   " url('assets/rose.jpg')",
-                   " url('assets/img-1.jpg')",
-                   " url('assets/img-1.jpg')",
-                   " url('assets/home.jpg')",
-                   " url('assets/cielo.jpg')",
-                   " url('assets/playa.jpg')",
-                   " url('assets/galaxy.jpg')",
-                   " url('assets/atardecer.jpg')",
-                   " url('assets/rose.jpg')",
-                ]
-                const section = document.querySelector('body')
-                const bg = images[Math.floor(Math.random()*images.length)];
-                section.style.background = bg;
-            }
-            setInterval(changeBg, 2000)
-        </script>
+
     </body>
 
 </html>

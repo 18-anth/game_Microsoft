@@ -13,7 +13,7 @@ let playerScore = 0;
 
 //function for score
 let scoreCounter = () => {
-    playerScore++;
+    playerScore ++;
     score.innerHTML = `Score <b>${playerScore}</b>`;
 }
 
@@ -30,6 +30,7 @@ window.addEventListener("keydown", (start) => {
         //score
         let playerScore = 0;
         interval = setInterval(scoreCounter, 200);
+
     }
 });
 
